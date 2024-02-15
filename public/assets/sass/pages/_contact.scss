@@ -1,0 +1,46 @@
+.contact-info {
+  .content {
+    color: $whiteColor;
+    background-color: $fontColor;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
+
+    .slogan-s {
+      padding: 30px 20px;
+
+      .info {
+        li {
+          @include displayflex($align: baseline, $gap: 10px);
+
+          &:not(:last-of-type) {
+            margin-bottom: 24px;
+          }
+
+          p,
+          a {
+            margin: 0;
+            font-weight: bold;
+          }
+
+          i {
+            font-size: 18px;
+            color: $mainColor;
+          }
+        }
+      }
+    }
+
+    .slogan-e.image-cover {
+      aspect-ratio: 16/9;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .form {
+    form {
+      padding: 40px 20px;
+      box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
+      border-radius: 15px;
+    }
+  }
+}

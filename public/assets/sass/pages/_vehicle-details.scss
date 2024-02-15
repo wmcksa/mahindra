@@ -1,0 +1,126 @@
+.vehicle-details-banners {
+  .banner {
+    padding-block: 12%;
+    position: relative;
+
+    .bg {
+      position: absolute;
+      inset: 0;
+      z-index: -1;
+      background: {
+        position: center;
+        repeat: no-repeat;
+        size: cover;
+      }
+    }
+
+    .title {
+      margin-bottom: 15px;
+    }
+
+    &:nth-last-of-type(2n + 2) {
+      > .container > .row {
+        flex-direction: row-reverse;
+      }
+    }
+  }
+}
+
+.vehicle-details-accessories {
+  $radius: 12px;
+  .accordion {
+    .accordion-item {
+      overflow: hidden;
+      color: $whiteColor;
+      background-color: $fontColor;
+      border-radius: $radius;
+
+      &:not(:last-of-type) {
+        margin-block-end: 15px;
+      }
+
+      .accordion-header {
+        .accordion-button {
+          color: $whiteColor;
+          background-color: $navColor;
+          border-radius: $radius;
+          box-shadow: none;
+          border: none;
+          transition: $transition;
+          font-weight: bold;
+          font-size: 18px;
+
+          &::after {
+            background-image: url("../imgs/white-select-arrow.svg");
+          }
+
+          &:not(.collapsed) {
+            background-color: $mainColor;
+          }
+        }
+      }
+
+      .accordion-body {
+        ul {
+          li {
+            p {
+              padding: 10px;
+              background-color: $navColor;
+              border-radius: 8px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .accessories {
+    .accessories-carousel {
+      .item {
+        border-radius: 8px;
+        aspect-ratio: 16/12;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
+        margin: 15px 15px;
+      }
+
+      .owl-nav {
+        margin-top: 30px;
+        button {
+          margin: 0;
+          transition: $transition;
+
+          &:not(:last-of-type) {
+            margin-inline-end: 15px;
+          }
+
+          &.owl-next,
+          &.owl-prev {
+            color: $fontColor;
+            background-color: $whiteColor;
+            border: 1px solid $fontLightColor;
+            padding: 0;
+            width: 35px;
+            aspect-ratio: 1/1;
+            border-radius: 50%;
+          }
+
+          > i {
+            line-height: initial;
+          }
+
+          &:hover {
+            color: $mainColor;
+          }
+
+          &.disabled {
+            opacity: 1;
+
+            > i {
+              opacity: 0.5;
+            }
+          }
+        }
+      }
+    }
+  }
+}

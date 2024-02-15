@@ -1,0 +1,25 @@
+[dir="rtl"] {
+  .navbar .content .nav-item.dropdown.vehicles .pills-link {
+    &::after {
+      transform: scaleX(-1);
+    }
+  }
+
+  .breadcrumb {
+    &::before {
+      background: linear-gradient(
+        to left,
+        rgba(0, 0, 0, 0.56) 0%,
+        rgba(0, 0, 0, 0) 100%
+      );
+    }
+  }
+
+  .vehicle-details-banners {
+    .banner {
+      .bg {
+        transform: scaleX(-1);
+      }
+    }
+  }
+}

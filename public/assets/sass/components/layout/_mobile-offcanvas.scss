@@ -1,0 +1,52 @@
+.mobile-offcanvas {
+  color: $whiteColor;
+  background-color: $navColor;
+  height: 100vh !important;
+
+  .offcanvas-header {
+    .close-btn {
+      color: $whiteColor;
+      border: none;
+      outline: none;
+      display: flex;
+      font-size: 20px;
+    }
+  }
+  .offcanvas-body {
+    .pages-links {
+      li {
+        &:not(:last-of-type) {
+          border-bottom: 1px solid #777272;
+        }
+
+        .link {
+          font-size: 18px;
+          font-weight: bold;
+          padding: 7px 0;
+          border: none;
+          color: $whiteColor;
+          background-color: transparent;
+        }
+
+        .accordion-item {
+          color: $whiteColor;
+          background-color: transparent;
+          border: none;
+          border-radius: 0;
+
+          .accordion-button {
+            box-shadow: none;
+
+            &::after {
+              background-image: url("../imgs/white-select-arrow.svg");
+            }
+          }
+
+          .accordion-body {
+            padding: 10px;
+          }
+        }
+      }
+    }
+  }
+}

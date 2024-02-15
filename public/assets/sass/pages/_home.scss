@@ -1,0 +1,65 @@
+.site-slogan {
+  color: $whiteColor;
+  background-color: $fontColor;
+  padding-block: 24px;
+
+  .content {
+    @include displayflex($align: last baseline, $wrap: wrap, $gap: 10px);
+    > * {
+      margin: 0;
+    }
+
+    .title {
+      font-weight: normal;
+    }
+  }
+
+  .details-navigate-link {
+    transition: $transition;
+
+    &:hover {
+      color: $mainColor;
+    }
+  }
+}
+
+.welcome {
+  .text {
+    text-align: center;
+    text-wrap: balance;
+    margin-block-end: 40px;
+  }
+
+  .features {
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
+
+    .feature-card {
+      aspect-ratio: 1/0.5;
+      background-color: $whiteColor;
+      text-align: center;
+      @include displayflex($direction: column, $justify: center);
+      border: 1px solid $borderColor;
+      transition: $transition;
+
+      i {
+        color: $mainColor;
+        font-size: 60px;
+        transition: $transition;
+      }
+
+      .title {
+        font-weight: bold;
+        text-transform: capitalize;
+      }
+
+      &:hover {
+        color: $whiteColor;
+        background-color: $mainColor;
+
+        i {
+          color: $whiteColor;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.form-control,
+.form-select {
+  border: none;
+  background: #f8f8f8;
+  border-bottom: 2px solid $fontColor;
+  font-size: 14px;
+  color: $fontColor;
+  min-height: 34px;
+  line-height: normal;
+  padding: 5px 10px;
+  box-shadow: none;
+  width: 100%;
+  border-radius: 0;
+  box-shadow: none !important;
+
+  &:focus {
+    background: #f8f8f8;
+    border-color: $fontColor;
+  }
+
+  &.dark {
+    color: $whiteColor;
+    background-color: $fontColor;
+    border-bottom: none;
+    border: 1px solid $fontColor;
+    --bs-form-select-bg-img: url("../imgs/white-select-arrow.svg");
+    border-radius: 5px;
+
+    &::placeholder {
+      color: $whiteColor;
+      font-size: 14px;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 0.25rem rgba($mainColor, 0.25);
+    }
+  }
+}

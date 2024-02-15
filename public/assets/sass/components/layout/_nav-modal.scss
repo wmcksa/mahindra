@@ -1,0 +1,30 @@
+.nav-modal {
+  .modal-content {
+    color: $whiteColor;
+    background-color: $navColor;
+
+    .modal-header,
+    .modal-footer {
+      border: none;
+    }
+
+    .modal-header {
+      .close-btn {
+        color: $whiteColor;
+        border: none;
+        outline: none;
+        display: flex;
+        font-size: 20px;
+      }
+    }
+
+    .modal-body {
+      @include displayflex($justify: unset);
+
+      .row {
+        width: 100%;
+        flex: 1;
+      }
+    }
+  }
+}

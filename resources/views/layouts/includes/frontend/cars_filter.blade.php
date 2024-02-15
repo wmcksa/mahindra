@@ -1,0 +1,1 @@
+<livewire:frontend.car-filter />

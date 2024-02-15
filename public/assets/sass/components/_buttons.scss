@@ -1,0 +1,29 @@
+.btn-outline-primary {
+  color: $fontColor;
+  border-color: $fontColor;
+  box-shadow: none !important;
+
+  &:hover,
+  &:focus-within,
+  &:active,
+  &:focus-visible {
+    color: $whiteColor !important;
+    border-color: $mainColor !important;
+    background-color: $mainColor !important;
+  }
+}
+
+.btn-outline-white {
+  color: $whiteColor;
+  border-color: $whiteColor;
+  box-shadow: none;
+
+  &:hover {
+    border-color: $whiteColor;
+  }
+}
+
+.btn-lg {
+  font-size: inherit;
+  padding-inline: 30px;
+}

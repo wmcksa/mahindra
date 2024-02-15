@@ -1,0 +1,62 @@
+.about-section {
+  > .container > .row {
+    row-gap: 30px;
+  }
+  .slogan-s {
+    .about-features {
+      .feature-card {
+        background-color: $whiteColor;
+        @include displayflex($align: flex-start, $wrap: wrap);
+        padding: 20px;
+        box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
+        border-radius: 10px;
+        transition: $transition;
+
+        &:not(:last-of-type) {
+          margin-bottom: 20px;
+        }
+
+        i {
+          color: $mainColor;
+          font-size: 60px;
+          flex-shrink: 0;
+          transition: $transition;
+        }
+
+        .content {
+          flex: 1;
+
+          .text {
+            margin: 0;
+          }
+        }
+
+        &:hover {
+          color: $whiteColor;
+          background-color: $mainColor;
+
+          i {
+            color: $whiteColor;
+          }
+        }
+      }
+    }
+  }
+
+  .slogan-e {
+    .video {
+      aspect-ratio: 1/1;
+      border-radius: 15px;
+      position: relative;
+      @include displayflex($justify: center);
+
+      i {
+        position: absolute;
+        color: $mainColor;
+        font-size: 60px;
+        background-color: $whiteColor;
+        border-radius: 50%;
+      }
+    }
+  }
+}

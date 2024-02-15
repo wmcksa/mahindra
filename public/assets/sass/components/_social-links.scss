@@ -1,0 +1,20 @@
+.social-links {
+  @include displayflex($wrap: wrap, $gap: 13px);
+
+  li {
+    .link {
+      width: 24px;
+      aspect-ratio: 1/1;
+      font-size: 12px;
+      @include displayflex($justify: center);
+      border: 1px solid $fontColor;
+      border-radius: 50%;
+      transition: $transition;
+
+      &:hover {
+        color: $mainColor;
+        border-color: $mainColor;
+      }
+    }
+  }
+}
