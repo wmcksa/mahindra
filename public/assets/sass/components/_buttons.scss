@@ -1,3 +1,7 @@
+.buttons {
+  @include displayflex($gap: 15px, $wrap: wrap);
+}
+
 .btn-outline-primary {
   color: $fontColor;
   border-color: $fontColor;
@@ -13,6 +17,12 @@
   }
 }
 
+.btn-primary {
+  background-color: $mainColor !important;
+  border-color: $mainColor !important;
+  box-shadow: none;
+}
+
 .btn-outline-white {
   color: $whiteColor;
   border-color: $whiteColor;
@@ -26,4 +36,20 @@
 .btn-lg {
   font-size: inherit;
   padding-inline: 30px;
+}
+
+.btn-gradient {
+  color: $whiteColor;
+  background: $mainGradient;
+  border: 1px solid #1e73be;
+  padding: 10px 16px;
+  border-radius: 0;
+}
+
+.btn-outline-white-2 {
+  color: $whiteColor;
+  border-color: $whiteColor;
+  box-shadow: none;
+  padding: 10px 16px;
+  border-radius: 0;
 }

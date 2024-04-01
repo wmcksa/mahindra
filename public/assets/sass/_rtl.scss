@@ -22,4 +22,27 @@
       }
     }
   }
+
+  .vehicle-slider-colors,
+  .vehicle-palettes {
+    direction: rtl;
+  }
+
+  .vehicle-slider-colors {
+    .swiper-button {
+      transform: scaleX(-1);
+
+      &.swiper-button-prev {
+        transform: scaleX(1);
+      }
+    }
+  }
+
+  .vehicle-details {
+    .register-contact {
+      .bg-absolute {
+        transform: scaleX(-1);
+      }
+    }
+  }
 }

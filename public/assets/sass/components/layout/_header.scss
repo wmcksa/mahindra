@@ -34,6 +34,28 @@
           margin-inline-end: 10px;
         }
       }
+
+      &.vehicle-dots {
+        @include displayflex($justify: center, $gap: 0);
+        bottom: 10px;
+
+        .owl-dot {
+          span {
+            width: 10px;
+            height: unset;
+            aspect-ratio: 1;
+            border-radius: 50%;
+            background-color: transparent;
+            border: 2px solid $whiteColor;
+          }
+
+          &.active {
+            span {
+              background-color: $whiteColor;
+            }
+          }
+        }
+      }
     }
   }
 }

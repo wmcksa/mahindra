@@ -1,3 +1,142 @@
+.vehicle-details {
+  color: $whiteColor;
+  background-color: #1b1919;
+
+  .register-contact {
+    position: relative;
+
+    .container {
+      position: relative;
+      z-index: 1;
+    }
+
+    .bg-absolute {
+      position: absolute;
+      z-index: 0;
+
+      &.img-1 {
+        inset-inline-end: 0;
+        inset-block-start: 30px;
+      }
+
+      &.img-2 {
+        inset-inline-start: 0;
+        inset-block-end: 30px;
+      }
+    }
+  }
+}
+
+.vehicle-welcome {
+  background-color: #181b1b;
+
+  .image {
+    aspect-ratio: 1/0.8;
+  }
+}
+
+.vehicle-variants {
+  .slogan-s {
+    .variant-block {
+      &:not(:last-of-type) {
+        border-inline-end: 1px solid #3a3a3a;
+      }
+
+      .price {
+        @include displayflex($align: flex-start, $gap: 5px);
+
+        span {
+          color: #d9d9d9;
+        }
+      }
+
+      .list {
+        ul {
+          list-style-type: disc;
+          padding-inline-start: 20px;
+
+          li {
+            margin-bottom: 10px;
+
+            &.red {
+              color: $mainColor;
+            }
+          }
+        }
+      }
+
+      .details-link {
+        text-decoration: underline;
+
+        &:hover {
+          text-decoration: none;
+          color: $mainColor;
+        }
+      }
+    }
+  }
+}
+
+.vehicle-slider-colors {
+  .swiper-slide {
+    text-align: center;
+
+    .image {
+      aspect-ratio: 1/0.35;
+    }
+  }
+
+  .swiper-button {
+    background: rgba(0, 0, 0, 0.2)
+      url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAkAAAAQCAQAAABuQZ3IAAAAi0lEQVR4AU3OISBEQQBAwS0AACS9NxqQgCZpkiYBVddFvWhAAUABAPQCAGC4g/0vTnrBqCfDIZl70J+kMUBPpEwT4FNXxBxz4F1HxHyr4EVTxBLb4EFNxEon4CJSlVNw9AcV9sC16h8osgke1P1ArgXwouVvdQq86ww/GQefusNf7kBviBlxpT8k+gL/Wox4r1d4MwAAAABJRU5ErkJggg==)
+      no-repeat scroll 50% 50% / 7px 11px;
+    border-radius: 32px;
+    display: block;
+    height: 32px;
+    margin-top: -16px;
+
+    overflow: hidden;
+    text-indent: -999em;
+    top: 50%;
+    transition: opacity 0.2s ease 0s;
+    width: 32px;
+
+    &.swiper-button-prev {
+      transform: scaleX(-1);
+    }
+
+    &.swiper-button-disabled {
+      opacity: 0.6;
+    }
+  }
+}
+
+.vehicle-palettes {
+  .swiper-wrapper {
+    width: fit-content;
+    margin-inline: auto;
+  }
+  .swiper-slide {
+    aspect-ratio: 1;
+    border-radius: 50%;
+    width: 35px;
+    border: 2px solid $whiteColor;
+    cursor: pointer;
+  }
+}
+
+.vehicle-gallery {
+  background-color: $whiteColor;
+
+  .head-title-2 .title {
+    color: $fontColor;
+  }
+
+  .gallery-card {
+    aspect-ratio: 1/0.55;
+  }
+}
+
 .vehicle-details-banners {
   .banner {
     padding-block: 12%;

@@ -5,3 +5,21 @@
   margin-block-end: 25px;
   color: $fontColor;
 }
+
+.head-title-2 {
+  margin-block-end: 25px;
+
+  .subtitle {
+    width: fit-content;
+    background: $mainGradient;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+    text-fill-color: transparent;
+  }
+
+  .title {
+    color: $whiteColor;
+    width: fit-content;
+  }
+}

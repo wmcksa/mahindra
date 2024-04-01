@@ -29,3 +29,18 @@
     background-color: $fontColor;
   }
 }
+
+.dark-page {
+  ~ .footer-wrapper {
+    background-color: #1b1919;
+    color: $whiteColor;
+
+    .footer {
+      border: none;
+    }
+
+    .rights {
+      background-color: #1b1919;
+    }
+  }
+}

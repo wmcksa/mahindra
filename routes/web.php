@@ -25,6 +25,7 @@ Route::post('/scheduleTestModal', [App\Http\Controllers\Frontend\en\FrontendCont
 Route::post('/requestOfferModal', [App\Http\Controllers\Frontend\en\FrontendController::class, 'requestOfferModal'])->name('requestOfferModal_post');
 Route::post('/requestInfoModal', [App\Http\Controllers\Frontend\en\FrontendController::class, 'requestInfoModal'])->name('requestInfoModal_post');
 Route::post('/bookMaintainanceModal', [App\Http\Controllers\Frontend\en\FrontendController::class, 'bookMaintainanceModal'])->name('bookMaintainanceModal_post');
+Route::post('/show-form-post', [App\Http\Controllers\Frontend\en\FrontendController::class, 'showFormPost'])->name('show_form_post');
 
 
 Auth::routes();

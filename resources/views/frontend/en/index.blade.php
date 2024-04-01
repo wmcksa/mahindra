@@ -61,7 +61,7 @@
           <div class="owl-carousel vehicles-carousel owl-theme">
           @foreach($modelCar->cars as $car)
             <div class="item">
-              <a href="{{route('VehiclesDetail_en',$car->category->first()->id)}}" class="vehicle-card">
+              <a href="{{route('VehiclesDetail_en',$car->id)}}" class="vehicle-card">
                 <div class="image-contain">
                   <img src="{{$car->image}}" alt="Scorpio-N" />
                 </div>

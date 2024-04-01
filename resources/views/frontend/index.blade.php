@@ -10,7 +10,7 @@
         @foreach($sliders as $slider)
         <div class="item">
           <div class="image-cover">
-            <img src="{{$slider->image}}" alt="" loading="lazy" />
+            <img src="{{$slider->image}}" alt=""  />
           </div>
         </div>
        @endforeach
@@ -61,7 +61,7 @@
           <div class="owl-carousel vehicles-carousel owl-theme">
           @foreach($modelCar->cars as $car)
             <div class="item">
-              <a href="{{route('vehicles_detail',$car->category->first()->id)}}" class="vehicle-card">
+              <a href="{{route('vehicles_detail',$car->id)}}" class="vehicle-card">
                 <div class="image-contain">
                   <img src="{{$car->image}}" alt="Scorpio-N" />
                 </div>

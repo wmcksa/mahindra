@@ -78,19 +78,20 @@ class FrontendController extends Controller
 
 
     //عرض معلومات السيارة المحددة
-    public function VehiclesDetail($category_id)
+    public function VehiclesDetail($car_id)
     {
-        $category = Category::where('id', $category_id)->where('language_id', 1)->first(); //جلب البيانات من جدول category بحسب رقم id
+        $car = Car::where('id',$car_id)->where('language_id', 1)->first();
+        $category = Category::where('car_id', $car_id)->where('language_id', 1)->first(); //جلب البيانات من جدول category بحسب رقم id
         if ($category) {
             // $categories = Category::where('car_id', $car_id)->get();
 
             //جلب المواصفات المرتبطة بالفئة المددة
             $feature = Feature::where('category_id', $category->id)->where('language_id', 1)->first();
             if ($feature) {
-
                 return view('frontend.VehiclesDetail', [
                     'category' => $category,
                     'feature' => $feature,
+                    'car' => $car,
                     // 'categories' => $categories
                 ]);
             } else {

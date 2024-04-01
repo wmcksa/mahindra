@@ -11,6 +11,7 @@
 
     <link rel="stylesheet" href="{{asset('assets/css/owl.carousel.min.css')}}" />
     <link rel="stylesheet" href="{{asset('assets/css/owl.theme.default.min.css')}}" />
+    <link rel="stylesheet" href="{{asset('assets/css/swiper-bundle.min.css')}}" />
 
     <link rel="stylesheet" href="{{asset('assets/css/fancybox.css')}}" />
 
@@ -968,7 +969,7 @@
     <script src="{{asset('assets/js/bootstrap.bundle.min.js')}}"></script>
     <script src="{{asset('assets/js/owl.carousel.min.js')}}"></script>
     <script src="{{asset('assets/js/fancybox.umd.js')}}"></script>
-
+    <script src="{{asset('assets/js/swiper-bundle.min.js')}}"></script>
     <script src="{{asset('assets/js/main.js')}}"></script>
 
     <script>

@@ -17,6 +17,7 @@ use App\Models\ModelCar;
 use App\Models\RequestMoreInfo;
 use App\Models\RequestOffer;
 use App\Models\Setting;
+use App\Models\ShowForm;
 
 class FrontendController extends Controller
 {
@@ -80,6 +81,15 @@ class FrontendController extends Controller
        return redirect()->back();
     }
 
+
+    public function showFormPost(Request $request)
+    {
+        $data = $request->all();
+       ShowForm::create($data);
+       return redirect()->back();
+    }
+
+
     //العرض يكون في الصفحة الرئيسية
     public function dealerlocator()
     {
@@ -122,9 +132,10 @@ class FrontendController extends Controller
         }
     }
     //عرض معلومات السيارة المحددة
-    public function VehiclesDetail($category_id)
+    public function VehiclesDetail($car_id)
     {
-        $category = Category::where('id', $category_id)->where('language_id', 2)->first(); //جلب البيانات من جدول category بحسب رقم id
+        $car = Car::where('id',$car_id)->where('language_id', 2)->first();
+        $category = Category::where('car_id', $car_id)->where('language_id', 2)->first(); //جلب البيانات من جدول category بحسب رقم id
         if ($category) {
 
             // $categories = Category::where('car_id', $car_id)->get();
@@ -136,6 +147,7 @@ class FrontendController extends Controller
                 return view('frontend.en.VehiclesDetail', [
                     'category' => $category,
                     'feature' => $feature,
+                    'car' => $car,
                     // 'categories' => $categories
                 ]);
             } else {
